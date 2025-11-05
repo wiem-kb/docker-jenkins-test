@@ -1,0 +1,6 @@
+services:
+web:
+image: user/monapp:latest
+ports:
+- "8081:80"
+restart: unless-stopped
