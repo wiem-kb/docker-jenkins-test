@@ -29,7 +29,7 @@ docker rm -f monapp_test
 stage('Push (Docker Hub)') {
 steps {
 withCredentials([usernamePassword(credentialsId: 'docker',
-usernameVariable: 'docker', passwordVariable: 'docker')]) {
+usernameVariable: 'docker', passwordVariable: 'dockertest')]) {
 bat """
 echo %PASS% | docker login -u %USER% --password-stdin
 docker tag %IMAGE%:%TAG% %IMAGE%:latest
