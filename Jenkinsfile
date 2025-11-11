@@ -31,7 +31,7 @@ steps {
 withCredentials([usernamePassword(credentialsId: 'dockerhub-ID',
 usernameVariable: 'dockerhub-user', passwordVariable: 'dockerhub-pass')]) {
 bat """
-echo %PASS% | docker login -u %USER% --password-stdin
+echo %dockerhub-pass% | docker login -u %dockerhub-user% --password-stdin
 docker tag %IMAGE%:%TAG% %IMAGE%:latest
 docker push %IMAGE%:%TAG%
 docker push %IMAGE%:latest
