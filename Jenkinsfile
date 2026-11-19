@@ -2,7 +2,7 @@ pipeline {
 agent any
 options { timestamps() }
 environment {
-IMAGE = 'wiemkbaier/monapp'
+IMAGE = 'wiemkbaier/monappDocker'
 TAG = "build-${env.BUILD_NUMBER}"
 }
 stages {
